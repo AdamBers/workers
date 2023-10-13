@@ -1,7 +1,17 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import WorkerItem from "../components/WorkerItem";
 
 function EditPage() {
-  return <div>EditPage</div>;
+
+  const { employeeId } = useParams();
+  
+
+  return (
+    <div className="ghg">
+      <WorkerItem workerId={Number(employeeId)} />
+    </div>
+  );
 }
 
 export default EditPage;
